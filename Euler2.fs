@@ -29,3 +29,7 @@ let EvenFibSeqUntil limit =
     Fib 0 1
   
 printfn "%d" (Seq.sum (EvenFibSeqUntil 4000000))
+
+//interesting found in sequence expression is that if the "if" block is replaced with a "while" block then the 
+//code goes in infinite loop and the last value is repeatedly returned. The iteration never breaks. This is something
+//not comming in C# because compiler complains of not all code paths returning a value.
