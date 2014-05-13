@@ -16,3 +16,16 @@ let EvenFibSeqUntil limit =
             if !next % 2 = 0 then yield !next}
 
 printfn "%d" (Seq.sum (EvenFibSeqUntil 4000000))
+
+
+//attempt 2 using tail recursion
+let EvenFibSeqUntil limit =
+    let rec Fib before next =
+        seq {
+              if next < limit then
+                let next' = before + next
+                if(next' % 2 = 0) then yield next'
+                yield! Fib next next'}
+    Fib 0 1
+  
+printfn "%d" (Seq.sum (EvenFibSeqUntil 4000000))
