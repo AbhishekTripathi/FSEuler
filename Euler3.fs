@@ -20,3 +20,4 @@ FindPrimeFactor 600851475143.00
 
 // Above solution is probably not the best example of the power of F#. It is more imperative and dirty. I am still 
 //not able to think in functional terms yet. Mutable variables should be avoided and replaced with recursive functions.
+//Nevertheless, the solution works and for the larger problem the answer is obtained in around 200ms.
